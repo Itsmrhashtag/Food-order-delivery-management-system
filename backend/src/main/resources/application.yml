@@ -1,0 +1,26 @@
+spring:
+  main:
+    allow-circular-references: true
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/foodmanagement?serverTimezone=UTC
+    username: root
+    password: 1234
+  jpa:
+    show-sql: true
+    properties:
+      hibernate.dialect: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: update
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 46565446422-vf3fhg7jqh69lfjjpag1d3bo4em49uh4.apps.googleusercontent.com
+            client-secret: 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
+            scope:
+              - email
+              - profile
+stripe:
+  secret-key: sk_test_51OSa1ASI94bxAiqN7KrBkzA8o6Deoywb0FjN7kRsJpO8qizHoScK8YIsmiowl00lvJ9DLTodBSKctZ1e8NQbnsds00nIjWMF0b
